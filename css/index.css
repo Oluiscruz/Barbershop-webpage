@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+html,
+body {
+    color: #ccc;
+    background: linear-gradient(#18181d, black);
+    width: 98.76vw;
+    height: 200vh;
+    transition: background 0.3s linear;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #25252d;
+    border-radius: 8px;
+    border: 3px solid rgb(0, 0, 0);
+
+}
+
+.container .menu .logo .checkbox {
+    opacity: 0;
+    position: absolute;
+    margin-left: 230px;
+    margin-top: 12px;
+    width: 60px;
+    height: 25px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.container .menu .logo label {
+    background-color: #091435;
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    padding: 5px;
+    position: relative;
+    width: 60px;
+    height: 25px;
+
+    transform: scale(0.96);
+}
+
+.container .menu .logo label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 20px;
+    width: 20px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.container .menu .logo .checkbox:checked+label .ball {
+    transform: translateX(35px);
+
+}
+
+.container .menu .logo label {
+    color: yellow;
+}
+
+.container .header {
+    background: linear-gradient(#000000, #000000);
+    box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.692);
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container .header>h1 {
+    font-size: 15pt;
+    background-image: linear-gradient(to right, rgb(16, 16, 105), blue, rgb(9, 198, 231));
+    /* Apagar do fundo tudo que não estiver imediatamente atrás de texto */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* Alguns navegadores precisam do prefixo */
+
+    /* Segundo passo: apagar o texto, deixando apenas o fundo atrás dele */
+    -webkit-text-fill-color: transparent;
+
+    /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+    color: black;
+}
+
+.container .menu {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 540px;
+    border: 2px solid #18181d;
+    border-radius: 30px;
+    height: 90px;
+}
+
+.container .menu .logo {
+    display: flex;
+    gap: 50px;
+    font-size: 14pt;
+}
+
+.container .menu .logo a {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 700;
+    gap: 4px;
+    margin-bottom: 30px;
+}
+
+.container .menu .logo a:hover {
+    color: #0d2fc9;
+    transition: all 0.2s;
+}
+
+.container .slogan {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container .slogan .left {
+    margin-top: 35px;
+    margin: 50px;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .slogan .left>h1 {
+    font-size: 25pt;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.container .slogan .left>h1 span {
+    text-transform: uppercase;
+
+    background-image: linear-gradient(to right, rgb(16, 16, 105), blue, rgb(9, 198, 231));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container .slogan .left .local>p {
+    margin: 10px;
+    font-size: 15pt;
+}
+
+.container .slogan .right img {
+    margin-top: 38px;
+    width: 400px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 10px 12px 12px rgba(0, 0, 0, 0.705);
+}
+
+.container main .container-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    font-size: 15pt;
+}
+
+.container main .barra-style {
+    background-image: linear-gradient(to right, rgb(16, 16, 105), blue, rgb(9, 198, 231));
+    width: 89.5vw;
+    height: 5px;
+    border-radius: 20px;
+    margin-top: 4px;
+}
+
+.container main .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.container main .section .itens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    border: 1px solid #18181d;
+    border-radius: 8px;
+    width: 500px;
+    height: 100px;
+    margin: 10px;
+    gap: 25px;
+}
+
+.container main .section .itens .title {
+    text-align: center;
+    margin-left: -15px;
+}
+
+.container main .section .itens .title>h5 {
+    font-size: 13pt;
+    color: #fff;
+}
+
+.container main .section .itens .title>p {
+    color: #0ed30e;
+    font-size: 10pt;
+    margin-top: 10px;
+}
+
+.container main .section .itens .btn {
+    margin-left: 15px;
+    display: flex;
+    gap: 25px;
+}
+
+.container main .section .itens .btn>p {
+    margin-top: 12px;
+    margin-left: 30px;
+}
+
+.container main .section .itens button {
+    padding: 10px 25px;
+    background-image: linear-gradient(to right, rgb(16, 16, 105), blue, rgb(9, 198, 231));
+
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+.container main .section .itens button:hover {
+    transform: scale(0.96);
+    background-image: linear-gradient(to right, rgb(16, 16, 194), rgb(10, 67, 255), rgb(5, 255, 59));
+    transition: all 0.3s ease-in;
+}
+
+.container main .section .itens img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+body.light {
+    background: #e2e1e1;
+    color: #18181d;
+}
+
+body.light .container .header {
+    background: #0940a5;
+}
+
+body.light .container .menu {
+    background: #0940a5;
+    border: 2px solid #c2c2c2e1;
+}
+
+body.light .container .menu a {
+    color: #fff;
+}
+
+body.light .container main .section .itens {
+    background: #ccc;
+    color: #000000;
+}
+
+body.light .container main .section .itens h5 {
+    color: #000000;
+}
+
+body.light .container main .section .itens .title p {
+    color: green;
+    font-weight: 600;
+}
+
+body.light .container .header>h1 {
+    font-size: 15pt;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255), rgb(198, 200, 201));
+    /* Apagar do fundo tudo que não estiver imediatamente atrás de texto */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* Alguns navegadores precisam do prefixo */
+
+    /* Segundo passo: apagar o texto, deixando apenas o fundo atrás dele */
+    -webkit-text-fill-color: transparent;
+
+    /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+    color: black;
+}
